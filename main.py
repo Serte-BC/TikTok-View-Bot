@@ -1,9 +1,14 @@
 import ssl
 import requests
 from threading import active_count, Thread
+from colorama import init, Fore
+from pystyle import Anime, Colorate, Colors, Center , System, Write
 from random import randint
+from pycenter import center
 from urllib3.exceptions import InsecureRequestWarning
 from http import cookiejar
+
+System.Title("𝐅𝐫𝐨𝐮𝐤-𝐯 - github.com/Frouk2 - ViewBot")
 
 class BlockCookies(cookiejar.CookiePolicy):
     return_ok = set_ok = domain_return_ok = path_return_ok = lambda self, *args, **kwargs: False
@@ -28,6 +33,18 @@ def stats(item_id):
             continue
     
 if (__name__ == "__main__"):
+
+    dns_tool = """
+___________                    __            ____   ____
+\_   _____/______  ____  __ __|  | __        \   \ /   /
+ |    __) \_  __ \/  _ \|  |  \  |/ /  ______ \   Y   / 
+ |     \   |  | \(  <_> )  |  /    <  /_____/  \     /  
+ \___  /   |__|   \____/|____/|__|_ \           \___/   
+     \/                            \/                  
+                                                    
+"""
+
+    print(center(Fore.LIGHTMAGENTA_EX+dns_tool))
     item_id = str(input("[?] Video Link >>> "))
     if ("vm.tiktok.com" in item_id or "vt.tiktok.com" in item_id):
         item_id = r.head(item_id, stream=True, verify=False, allow_redirects=True).url.split("/")[5].split("?", 1)[0]
