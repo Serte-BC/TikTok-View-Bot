@@ -40,11 +40,11 @@ ___________                    __            ____   ____
  |    __) \_  __ \/  _ \|  |  \  |/ /  ______ \   Y   / 
  |     \   |  | \(  <_> )  |  /    <  /_____/  \     /  
  \___  /   |__|   \____/|____/|__|_ \           \___/   
-     \/                            \/                  
+     \/                            \/           v1.3     
                                                     
 """
+    print(Colorate.Diagonal(Colors.blue_to_green, Center.XCenter(dns_tool)))
 
-    print(center(Fore.LIGHTMAGENTA_EX+dns_tool))
     item_id = str(input("[?] Video Link >>> "))
     if ("vm.tiktok.com" in item_id or "vt.tiktok.com" in item_id):
         item_id = r.head(item_id, stream=True, verify=False, allow_redirects=True).url.split("/")[5].split("?", 1)[0]
@@ -60,7 +60,7 @@ ___________                    __            ____   ____
                     Thread(target=(stats), args=(item_id,)).start()
                     break
     else:
-        for _ in range(amount):
+       for _ in range(amount):
             while True:
                 if (active_count() <= 5000):
                     Thread(target=(stats), args=(item_id,)).start()
