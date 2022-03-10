@@ -1,7 +1,6 @@
 #github.com/Frouk2
 
 import ssl
-from pygame import Color
 import requests
 from threading import active_count, Thread
 from pystyle import Anime, Colorate, Colors, Center , System, Write
