@@ -30,5 +30,14 @@ If you want to open several terminals it is possible!
 <br><br>
 
 -----
+  
+### <p align="center">🎨 Contributors 🎨</p>
+
+<br><br>
+* [Gab.py](https://github.com/Gabthefirst)
+* ["! Zed](https://github.com/ZedCroy)
+<br><br>
+
+-----
 
 ### <p align="center">github.com/Frouk2</p>
