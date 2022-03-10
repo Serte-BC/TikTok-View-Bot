@@ -1,7 +1,6 @@
 import ssl
 import requests
 from threading import active_count, Thread
-from colorama import init, Fore
 from pystyle import Anime, Colorate, Colors, Center , System, Write
 from random import randint
 from pycenter import center
