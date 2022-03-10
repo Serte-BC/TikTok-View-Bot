@@ -1,4 +1,7 @@
+#github.com/Frouk2
+
 import ssl
+from pygame import Color
 import requests
 from threading import active_count, Thread
 from pystyle import Anime, Colorate, Colors, Center , System, Write
@@ -39,24 +42,26 @@ ___________                    __            ____   ____
  |    __) \_  __ \/  _ \|  |  \  |/ /  ______ \   Y   / 
  |     \   |  | \(  <_> )  |  /    <  /_____/  \     /  
  \___  /   |__|   \____/|____/|__|_ \           \___/   
-     \/                            \/           v1.3     
+     \/                            \/           v2.0  
                                                     
 """
     print(Colorate.Diagonal(Colors.blue_to_green, Center.XCenter(dns_tool)))
 
-    item_id = str(input("[?] Video Link >>> "))
+    print(Colorate.Horizontal(Colors.blue_to_white, "[?] Video Link ↓"))
+    item_id = str(input(""))
     if ("vm.tiktok.com" in item_id or "vt.tiktok.com" in item_id):
         item_id = r.head(item_id, stream=True, verify=False, allow_redirects=True).url.split("/")[5].split("?", 1)[0]
     else:
         item_id = item_id.split("/")[5].split("?", 1)[0]
-    amount = int(input("[?] How many views do you want (0 = Infinite) >>> "))
+    print(Colorate.Horizontal(Colors.blue_to_white, "[?] How many views do you want (0 = Infinite) ↓"))
+    amount = int(input(""))
     print("")
     print("[i] Sending views...")
     if (amount == 0):
         for _ in iter(int, 1):
             while True:
                 if (active_count() <= 5000):
-                    print(Colorate.Horizontal(Colors.blue_to_white, Center.XCenter(f"Views sent: {x}")))
+                    print(Colorate.Horizontal(Colors.blue_to_white, f"Views sent: {x}"))
                     x += 1
                     Thread(target=(stats), args=(item_id,)).start()
                     break
@@ -64,7 +69,7 @@ ___________                    __            ____   ____
        for _ in range(amount):
             while True:
                 if (active_count() <= 5000):
-                    print(Colorate.Horizontal(Colors.blue_to_white, Center.XCenter(f"Views sent: {x}")))
+                    print(Colorate.Horizontal(Colors.blue_to_white, f"Views sent: {x}"))
                     x += 1
                     Thread(target=(stats), args=(item_id,)).start()
                     break
