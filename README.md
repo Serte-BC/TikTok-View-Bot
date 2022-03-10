@@ -34,8 +34,7 @@ If you want to open several terminals it is possible!
 ### <p align="center">🎨 Contributors 🎨</p>
 
 <br><br>
-* [Gab.py](https://github.com/Gabthefirst)
-* ["! Zed](https://github.com/ZedCroy)
+* [Gab.py](https://github.com/Gabthefirst) | Bg ultime !
 <br><br>
 
 -----
