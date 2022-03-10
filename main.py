@@ -7,8 +7,6 @@ from pycenter import center
 from urllib3.exceptions import InsecureRequestWarning
 from http import cookiejar
 
-System.Title("𝐅𝐫𝐨𝐮𝐤-𝐯 - github.com/Frouk2 - ViewBot")
-
 class BlockCookies(cookiejar.CookiePolicy):
     return_ok = set_ok = domain_return_ok = path_return_ok = lambda self, *args, **kwargs: False
     netscape = True
@@ -16,6 +14,8 @@ class BlockCookies(cookiejar.CookiePolicy):
 
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 ssl._create_default_https_context = ssl._create_unverified_context
+
+x = 0
 
 r = requests.Session()
 r.cookies.set_policy(BlockCookies())
@@ -39,7 +39,7 @@ ___________                    __            ____   ____
  |    __) \_  __ \/  _ \|  |  \  |/ /  ______ \   Y   / 
  |     \   |  | \(  <_> )  |  /    <  /_____/  \     /  
  \___  /   |__|   \____/|____/|__|_ \           \___/   
-     \/                            \/           v1.5     
+     \/                            \/           v1.3     
                                                     
 """
     print(Colorate.Diagonal(Colors.blue_to_green, Center.XCenter(dns_tool)))
@@ -56,11 +56,15 @@ ___________                    __            ____   ____
         for _ in iter(int, 1):
             while True:
                 if (active_count() <= 5000):
+                    print(Colorate.Horizontal(Colors.blue_to_white, Center.XCenter(f"Views sent: {x}")))
+                    x += 1
                     Thread(target=(stats), args=(item_id,)).start()
                     break
     else:
        for _ in range(amount):
             while True:
                 if (active_count() <= 5000):
+                    print(Colorate.Horizontal(Colors.blue_to_white, Center.XCenter(f"Views sent: {x}")))
+                    x += 1
                     Thread(target=(stats), args=(item_id,)).start()
                     break
